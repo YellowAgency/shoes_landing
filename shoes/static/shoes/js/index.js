@@ -3,11 +3,62 @@
  */
 $(document).ready(function () {
     // говнокод на говнокод - кек, Санёк
+    // ЛОООООООООООООООЛ
     var static_prefix = 'static/shoes/';
+
+    //наведения на кнопку
+    $('.genuino__big_button__call').hover(
+        function() {
+            $(".genuino__big_button__call__text").hide();
+            $("#genuino__big_button__call__onlynumber").css('display', 'inline-block');
+        },
+        function(){
+            $("#genuino__big_button__call__onlynumber").css('display', 'none');
+            $(".genuino__big_button__call__text").show();
+        }
+    );
+
+    //подчеркивания - прям вот уверен, что можно было сделать проще
+    $("#first_screen").hover(
+        function(){
+            $("#js__navbar__about").find("span").addClass('underlined');
+        },
+        function(){
+            $("#js__navbar__about").find("span").removeClass('underlined');
+    });
+    $("#second_screen").hover(
+        function(){
+            $("#js__navbar__individual").find("span").addClass('underlined');
+        },
+        function(){
+            $("#js__navbar__individual").find("span").removeClass('underlined');
+    });
+    $("#third_screen").hover(
+        function(){
+            $("#js__navbar__order").find("span").addClass('underlined');
+        },
+        function(){
+            $("#js__navbar__order").find("span").removeClass('underlined');
+    });
+    $("#fourth_screen").hover(
+        function(){
+            $("#js__navbar__order").find("span").addClass('underlined');
+        },
+        function(){
+            $("#js__navbar__order").find("span").removeClass('underlined');
+    });
+    $("#fifth_screen").hover(
+        function(){
+            $("#js__navbar__contacts").find("span").addClass('underlined');
+        },
+        function(){
+            $("#js__navbar__contacts").find("span").removeClass('underlined');
+    });
+
     //открываем первую шнягу
     var firstLoadOpening = $(".fivesteps_header[data-number='1']");
     $(".fivesteps__boots__img__circle[data-number='1']").attr('src', static_prefix + 'img/circles_1_1.png');
-    firstLoadOpening.parent().find(".fivesteps_info").show();
+    firstLoadOpening.parent().find(".fivesteps_info").show("slow");
     firstLoadOpening.find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
     firstLoadOpening.find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
 
@@ -25,7 +76,7 @@ $(document).ready(function () {
         $(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_question.png');
         $(".fivesteps_info").hide();
         //а вот тут уже открываем
-        $(this).parent().find(".fivesteps_info").show();
+        $(this).parent().find(".fivesteps_info").show("slow");
         $(this).find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
         $(this).find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
     });
@@ -43,7 +94,7 @@ $(document).ready(function () {
         $(".fivesteps_info").hide();
         //а вот тут уже открываем
         var targetElement = $(".fivesteps_header[data-number='" + number + "']");
-        targetElement.parent().find(".fivesteps_info").show();
+        targetElement.parent().find(".fivesteps_info").show("slow");
         targetElement.find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
         targetElement.find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
 
