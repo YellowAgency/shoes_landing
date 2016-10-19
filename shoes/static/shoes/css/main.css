@@ -529,6 +529,9 @@ body {
     padding-bottom: 10px;
     padding-top: 4px;
 }
+.fourth_screen__card_header__content_img{
+    height: 15px;
+}
 
 .fourth_screen__card_content {
     min-height: 150px;
@@ -663,4 +666,18 @@ body {
 }
 
 #fifth_screen .container {
+    padding-bottom: 30px;
+}
+#footer{
+    border-top: 1px solid white;
+    color: white;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+.modalform__submit_button{
+    color: black !important;
+    background-color: #cccccc !important;
+    border-color: #c5c5c2 !important;
 }

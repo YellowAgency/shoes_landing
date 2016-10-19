@@ -105,6 +105,8 @@ $(document).ready(function () {
         $(this).find('.ol__circle__radius').addClass('ol__circle__radius_clicked');
         $(".img__styles__div").find('img').attr("src", static_prefix + 'img/second_screen_' + picture + '.png');
     });
+
+    //Здесь смув-скрол
     //$(".js__navbar__button").click(function() {
     //    $('a[href*="#"]:not([href="#"])').click(function () {
     //        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

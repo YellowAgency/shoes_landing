@@ -131,12 +131,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ваше имя</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                   aria-describedby="emailHelp" placeholder="Enter email">
+                                   aria-describedby="emailHelp" placeholder="Введите имя">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ваш телефон</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                   aria-describedby="emailHelp" placeholder="Enter email">
+                                   aria-describedby="emailHelp" placeholder="Введите телефон">
                             <small id="emailHelp" class="form-text text-muted">Обещаем не использовать Ваш телефон для рассылок
                             </small>
                         </div>
@@ -144,11 +144,8 @@
                             <label for="exampleTextarea">Есть ли у Вас вопросы?</label>
                             <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Оставить заявку</button>
+                        <button type="submit" class="btn btn-primary modalform__submit_button">Оставить заявку</button>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                 </div>
             </div>
 
@@ -393,6 +390,8 @@
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Пошив любой модели из нашей коллекции туфель
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
+
                             </span>
                     </div>
                 </div>
@@ -416,17 +415,19 @@
             <div class="col-md-3">
                 <div class="fourth_screen__card_header">
                     <div class="fourth_screen__card_header__header">
-                        <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
+                        <span class="fourth_screen__card_header__header_span">Пошив ботинок</span>
                     </div>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Пошив любой модели из нашей коллекции ботинок.
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
+
                     </div>
                 </div>
                 <div class="fourth_screen__card_content">
                     <div class="fourth_screen__card_content__price">
-                        18 500
+                        20 900
                     </div>
                     <div class="fourth_screen__card_content__text">
                         Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
@@ -444,21 +445,23 @@
             <div class="col-md-3">
                 <div class="fourth_screen__card_header">
                     <div class="fourth_screen__card_header__header">
-                        <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
+                        <span class="fourth_screen__card_header__header_span">Зимние ботинки</span>
                     </div>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Пошив любой модели из нашей коллекции
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
+
                     </div>
                 </div>
                 <div class="fourth_screen__card_content">
                     <div class="fourth_screen__card_content__price">
-                        18 500
+                        23 900
                     </div>
                     <div class="fourth_screen__card_content__text">
-                        Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
-                        методы крепления - GoodYear Welt.
+                        Верх обуви натуральная телячья кожа и/или замша, подошва - термоаластопласт.
+                        Мех - натуральная овчина.
                     </div>
                     <div class="fourth_screen__card_content__CTA">
                         <button data-toggle="modal" data-target="#myModal"
@@ -472,20 +475,21 @@
             <div class="col-md-3">
                 <div class="fourth_screen__card_header">
                     <div class="fourth_screen__card_header__header">
-                        <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
+                        <span class="fourth_screen__card_header__header_span">Другие модели</span>
                     </div>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Модель на Ваш выбор, которой нет в нашей коллекции
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
                     </div>
                 </div>
                 <div class="fourth_screen__card_content">
                     <div class="fourth_screen__card_content__price">
-                        18 500
+                        21 500
                     </div>
                     <div class="fourth_screen__card_content__text">
-                        Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
+                        Верх обуви ЛЮБАЯ натуральная кожа и/или замша, подошва - кожа,
                         методы крепления - GoodYear Welt.
                     </div>
                     <div class="fourth_screen__card_content__CTA">
@@ -571,7 +575,24 @@
 </section>
 <section id="footer">
     <div class="container">
-        <div class="row"></div>
+        <div class="row">
+            <div class="col-sm-4" align="center">
+                <span>
+                    GENUINO<br>HandCraft
+                </span>
+            </div>
+            <div class="col-sm-4" align="center">
+                <span>
+                    Телефон:<br>
+                    +7(977)-342-74-88
+                </span>
+            </div>
+            <div class="col-sm-4" align="center">
+                <button data-toggle="modal" data-target="#myModal" class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 
