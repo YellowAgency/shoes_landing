@@ -108,7 +108,7 @@ $(document).ready(function () {
 
     //Вот тут перехватываю сабмит формы
     $(".js_formsubmit").submit(function(e){
-        e.preventDefault();
+        (e).preventDefault();
         var myForm = $(this);
         if (!myForm.find(".jsFormSubmitName").val()){
             alert('Enter name');
@@ -118,7 +118,12 @@ $(document).ready(function () {
         }
         if (myForm.find(".jsFormSubmitName").val() && myForm.find(".jsFormSubmitNumber").val()){
             //Почистить поля
+            myForm.find(".jsFormSubmitName").val('');
+            myForm.find(".jsFormSubmitNumber").val('');
             //Swal - успех
+            swal("Спасибо!", "Заявка принята в обработку.", "success");
+            //Закрываем модальное окно
+            myForm.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
         }
     });
 

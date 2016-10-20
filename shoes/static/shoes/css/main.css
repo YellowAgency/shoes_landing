@@ -681,3 +681,16 @@ body {
     background-color: #cccccc !important;
     border-color: #c5c5c2 !important;
 }
+
+/* Swal customize */
+.sweet-alert h2{
+    font-family: 'Playfair Display', serif !important;
+}
+.sweet-alert p{
+    font-family: 'Playfair Display', serif !important;
+}
+.sa-confirm-button-container .confirm{
+    background-color: rgb(161, 165, 167) !important;
+    color: black !important;
+    font-family: 'Playfair Display', serif !important;
+}
