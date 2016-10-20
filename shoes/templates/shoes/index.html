@@ -10,6 +10,7 @@
     <link href="{% static 'shoes/css/main.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'shoes/js/mask.js' %}"></script>
     <script src="{% static 'shoes/js/index.js' %}"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
@@ -92,7 +93,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1 col-sm-12">
-                <form>
+                <form class = "js_formsubmit">
                     <div class="row first_screen__form__first_row" align="center">
                             <span class="first_screen__form__first_row__span">
                                 Для тех кто знает о комфорте все
@@ -100,14 +101,14 @@
                     </div>
                     <div class="row first_screen__form__second_row ">
                         <div class="col-md-6" align="center">
-                            <input class="first_screen__form__second_row__input" placeholder="Имя" type="text">
+                            <input class="first_screen__form__second_row__input jsFormSubmitName" placeholder="Имя" type="text">
                         </div>
                         <div class="col-md-6" align="center">
-                            <input class="first_screen__form__second_row__input" placeholder="Телефон" type="text">
+                            <input class="first_screen__form__second_row__input jsFormSubmitNumber" placeholder="Телефон" type="text">
                         </div>
                     </div>
                     <div class="row first_screen__form__third_row" align="center">
-                        <button type="submit" data-toggle="modal" data-target="#myModal"
+                        <button type="submit"
                                 class="about_us__CTA btn genuino__big_button">
                             Оставить заявку
                         </button>
@@ -127,15 +128,15 @@
                     <h4 class="modal-title">Оставьте заявку</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class = "js_formsubmit">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ваше имя</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
+                            <input type="text" class="form-control jsFormSubmitName" id="InputName"
                                    aria-describedby="emailHelp" placeholder="Введите имя">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ваш телефон</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
+                            <input type="email" class="form-control jsFormSubmitNumber" id="InputNumber"
                                    aria-describedby="emailHelp" placeholder="Введите телефон">
                             <small id="emailHelp" class="form-text text-muted">Обещаем не использовать Ваш телефон для рассылок
                             </small>

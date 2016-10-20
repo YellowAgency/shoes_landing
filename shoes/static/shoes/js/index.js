@@ -106,6 +106,37 @@ $(document).ready(function () {
         $(".img__styles__div").find('img').attr("src", static_prefix + 'img/second_screen_' + picture + '.png');
     });
 
+    //Вот тут перехватываю сабмит формы
+    $(".js_formsubmit").submit(function(e){
+        e.preventDefault();
+        var myForm = $(this);
+        if (!myForm.find(".jsFormSubmitName").val()){
+            alert('Enter name');
+        }
+        if (!myForm.find(".jsFormSubmitNumber").val()){
+            alert('Enter phone');
+        }
+        if (myForm.find(".jsFormSubmitName").val() && myForm.find(".jsFormSubmitNumber").val()){
+            //Почистить поля
+            //Swal - успех
+        }
+    });
+
+    $(".jsFormSubmitNumber").mask("+7 (999) 999 99 99")
+                            .on("blur", function() {
+        var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
+
+        if( last.length == 3 ) {
+            var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
+            var lastfour = move + last;
+            var first = $(this).val().substr( 0, 9 );
+
+            $(this).val( first + '-' + lastfour );
+        }
+    });
+
+
+
     //Здесь смув-скрол
     //$(".js__navbar__button").click(function() {
     //    $('a[href*="#"]:not([href="#"])').click(function () {
