@@ -106,29 +106,69 @@ $(document).ready(function () {
         $(".img__styles__div").find('img').attr("src", static_prefix + 'img/second_screen_' + picture + '.png');
     });
 
-    //Вот тут перехватываю сабмит формы
-    $(".js_formsubmit").submit(function(e){
-        (e).preventDefault();
-        var myForm = $(this);
-        if (!myForm.find(".jsFormSubmitName").val()){
-            alert('Enter name');
-        }
-        if (!myForm.find(".jsFormSubmitNumber").val()){
-            alert('Enter phone');
-        }
-        if (myForm.find(".jsFormSubmitName").val() && myForm.find(".jsFormSubmitNumber").val()){
-            //Почистить поля
-            myForm.find(".jsFormSubmitName").val('');
-            myForm.find(".jsFormSubmitNumber").val('');
-            //Swal - успех
-            swal("Спасибо!", "Заявка принята в обработку.", "success");
-            //Закрываем модальное окно
-            myForm.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
-        }
-    });
+    // //Вот тут перехватываю сабмит формы
+    // $(".js_formsubmit").submit(function(e){
+    //     (e).preventDefault();
+    //     var myForm = $(this);
+    //     if (!myForm.find(".jsFormSubmitName").val()){
+    //         alert('Enter name');
+    //     }
+    //     if (!myForm.find(".jsFormSubmitNumber").val()){
+    //         alert('Enter phone');
+    //     }
+    //     if (myForm.find(".jsFormSubmitName").val() && myForm.find(".jsFormSubmitNumber").val()){
+    //         //Почистить поля
+    //         myForm.find(".jsFormSubmitName").val('');
+    //         myForm.find(".jsFormSubmitNumber").val('');
+    //         //Swal - успех
+    //         swal("Спасибо!", "Заявка принята в обработку.", "success");
+    //         //Закрываем модальное окно
+    //         myForm.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
+    //     }
+    // });
+    //
+    // $(".jsFormSubmitNumber").mask("+7 (999) 999 99 99")
+    //                         .on("blur", function() {
+    //     var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
+    //
+    //     if( last.length == 3 ) {
+    //         var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
+    //         var lastfour = move + last;
+    //         var first = $(this).val().substr( 0, 9 );
+    //
+    //         $(this).val( first + '-' + lastfour );
+    //     }
+    // });
 
-    $(".jsFormSubmitNumber").mask("+7 (999) 999 99 99")
-                            .on("blur", function() {
+     $('.js_formsubmit').submit(function(e){
+        e.preventDefault();
+        var url = $(this).attr('action');
+        if (!($(this).find('#id_name').val())){
+            $(this).find('.name__span__error').show();
+        }
+        if (!($(this).find('#id_phone').val())){
+            $(this).find('.phone__span__error').show();
+        }
+        if ($(this).find('#id_name').val()&&$(this).find('#id_phone').val()){
+              var myForm = $(this).serializeArray();
+                console.log(myForm);
+              var newThis = $(this);
+              $(this).find('.name__span__error').hide();
+              $(this).find('.phone__span__error').hide();
+
+              ajaxPost(url, myForm, function(e){
+                  console.log(e);
+                  newThis.find('#id_name').val('');
+                  newThis.find('#id_PHONE').val('');
+                  swal("Спасибо!", "Заявка принята в обработку.", "success");
+              });
+              return false;
+        }
+        return false;
+    });
+    $(".phone-validator").mask("+7 (999) 999 99 99");
+
+    $(".phone-validator").on("blur", function() {
         var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
 
         if( last.length == 3 ) {
@@ -139,23 +179,5 @@ $(document).ready(function () {
             $(this).val( first + '-' + lastfour );
         }
     });
-
-
-
-    //Здесь смув-скрол
-    //$(".js__navbar__button").click(function() {
-    //    $('a[href*="#"]:not([href="#"])').click(function () {
-    //        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //            var target = $(this.hash);
-    //            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //            if (target.length) {
-    //                $('html, body').animate({
-    //                    scrollTop: target.offset().top
-    //                }, 500);
-    //                return false;
-    //            }
-    //        }
-    //    });
-    //});
 
 });

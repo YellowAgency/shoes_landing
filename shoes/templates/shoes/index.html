@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,18 +92,19 @@
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1 col-sm-12">
-                <form class = "js_formsubmit">
+                <form action="{% url 'shoes:process' %}" method="post" class = "js_formsubmit">
+                    {% csrf_token %}
                     <div class="row first_screen__form__first_row" align="center">
                             <span class="first_screen__form__first_row__span">
                                 Для тех кто знает о комфорте все
                             </span>
                     </div>
                     <div class="row first_screen__form__second_row ">
-                        <div class="col-md-6" align="center">
-                            <input class="first_screen__form__second_row__input jsFormSubmitName" placeholder="Имя" type="text">
+                        <div class="col-md-6" align="center"><span class="name__span__error">Введите Ваше имя</span>
+                            {{ form.name | attr:"placeholder:Имя" | add_class:"first_screen__form__second_row__input jsFormSubmitName" }}
                         </div>
-                        <div class="col-md-6" align="center">
-                            <input class="first_screen__form__second_row__input jsFormSubmitNumber" placeholder="Телефон" type="text">
+                        <div class="col-md-6" align="center"><span class="phone__span__error">Введите телефон</span>
+                            {{ form.phone | attr:"placeholder:Телефон" | add_class:"first_screen__form__second_row__input phone-validator jsFormSubmitNumber" }}
                         </div>
                     </div>
                     <div class="row first_screen__form__third_row" align="center">
@@ -595,6 +597,7 @@
     </div>
 </section>
 
+<script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
 <script src="{% static 'shoes/js/mask.js' %}"></script>
 <script src="{% static 'shoes/js/index.js' %}"></script>
 <script src="{% static 'shoes/js/sweetalert.min.js' %}"></script>
