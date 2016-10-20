@@ -2,538 +2,601 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>
-    GENUINO Handcraft
-  </title>
-  <link href="{% static 'shoes/css/main.css' %}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{% static 'shoes/js/index.js' %}"></script>
-
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-          crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>
+        GENUINO Handcraft
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'shoes/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'shoes/css/sweetalert.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <nav id="genuino__nav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"><span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#">GENUINO</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="js__navbar__button" id="js__navbar__about" href="#first_screen">О бренде</a></li>
-        <li><a class="js__navbar__button" id="js__navbar__individual" href="#second_screen">Индивидуальный подход</a>
-        </li>
-        <li><a class="js__navbar__button" id="js__navbar__order" href="#third_screen">Пошив на заказ</a></li>
-        <li><a class="js__navbar__button" id="js__navbar__contacts" href="#fourth_screen">Контакты</a></li>
-        <li>
-          <a data-toggle="modal" data-target="#myModal">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"><span
+                    class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="#">GENUINO</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="js__navbar__button" id="js__navbar__about" href="#first_screen"><span>О бренде</span></a>
+                </li>
+                <li><a class="js__navbar__button" id="js__navbar__individual" href="#second_screen"><span>Индивидуальный подход</span></a>
+                </li>
+                <li><a class="js__navbar__button" id="js__navbar__order"
+                       href="#third_screen"><span>Пошив на заказ</span></a></li>
+                <li><a class="js__navbar__button" id="js__navbar__contacts" href="#fourth_screen"><span>Контакты</span></a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#myModal">
                             <span class="navbar__CTA_span">
                                 Оставить заявку
                             </span>
-          </a>
-        </li>
-      </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 <section id="first_screen">
-  <div class="container">
-    <div class="row aboutus__row">
-      <div class="col-md-5 col-sm-12 about_us__div">
-        <h4 class="about_us_div_main_header">
-          GENUINO HandCraft:
-        </h4>
-        <p class="about_us_div_main_p">
-          индивидуальный пошив<br>
-          классической мужской обуви
-        </p>
-        <div class="about_us__text">
-          <h4 class="about_us__div__header">Узнайте больше о том, как мы создаем искусство</h4>
-          <img src="{% static 'shoes/img/screen1_underline.png' %}"/>
-          <p class="about_us__div_first_p">
-            <span class="aboutus__div__list__header">Персональное снятие мерок с клиентов</span><br>
-            Выезд специалиста в любую точку Москвы и МО в любое удобное для Вас время.
-          </p>
-          <p>
-            <span class="aboutus__div__list__header">Индивидуальный пошив каждой пары</span><br>
-            С применением технологии bespoke с возможностью выполнения любых желаний для каждой пары.
-          </p>
-          <p>
-            <span class="aboutus__div__list__header">3 мастера с 17-летним опытом работы</span><br>
-            Собственное производство в Москве, выпустившее за карьеру более 10 000 пар обуви.
+    <div class="container">
+        <div class="row aboutus__row">
+            <div class="col-md-5 col-sm-12 about_us__div">
+                <h4 class="about_us_div_main_header">
+                    GENUINO HandCraft:
+                </h4>
 
-          </p>
-          <p>
-            <span class="aboutus__div__list__header">Изготовление в течение 14-16 дней</span><br>
-            Которые начинаются с первой секунды после приема заявки в любом удобном для Вас месте.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-md-offset-1 col-sm-12">
-        <form>
-          <div class="row first_screen__form__first_row" align="center">
+                <p class="about_us_div_main_p">
+                    индивидуальный пошив<br>
+                    классической мужской обуви
+                </p>
+
+                <div class="about_us__text">
+                    <h4 class="about_us__div__header">Узнайте больше о том, как мы создаем искусство</h4>
+                    <img src="{% static 'shoes/img/screen1_underline.png' %}"/>
+
+                    <p class="about_us__div_first_p">
+            <span class="aboutus__div__list__header">
+                <span class="aboutus__div__list__header_dot">●</span>
+                Персональное снятие мерок с клиентов
+            </span>
+                        <br>
+                        Выезд специалиста в любую точку Москвы и МО в любое удобное для Вас время.
+                    </p>
+
+                    <p>
+                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>Индивидуальный пошив каждой пары</span><br>
+                        С применением технологии bespoke с возможностью выполнения любых желаний для каждой пары.
+                    </p>
+
+                    <p>
+                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>3 мастера с 17-летним опытом работы</span><br>
+                        Собственное производство в Москве, выпустившее за карьеру более 10 000 пар обуви.
+
+                    </p>
+
+                    <p>
+                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>Изготовление в течение 14-16 дней</span><br>
+                        Которые начинаются с первой секунды после приема заявки в любом удобном для Вас месте.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-1 col-sm-12">
+                <form class = "js_formsubmit">
+                    <div class="row first_screen__form__first_row" align="center">
                             <span class="first_screen__form__first_row__span">
                                 Для тех кто знает о комфорте все
                             </span>
-          </div>
-          <div class="row first_screen__form__second_row ">
-            <div class="col-md-6" align="center">
-              <input class="first_screen__form__second_row__input" placeholder="Имя" type="text">
+                    </div>
+                    <div class="row first_screen__form__second_row ">
+                        <div class="col-md-6" align="center">
+                            <input class="first_screen__form__second_row__input jsFormSubmitName" placeholder="Имя" type="text">
+                        </div>
+                        <div class="col-md-6" align="center">
+                            <input class="first_screen__form__second_row__input jsFormSubmitNumber" placeholder="Телефон" type="text">
+                        </div>
+                    </div>
+                    <div class="row first_screen__form__third_row" align="center">
+                        <button type="submit"
+                                class="about_us__CTA btn genuino__big_button">
+                            Оставить заявку
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-6" align="center">
-              <input class="first_screen__form__second_row__input" placeholder="Телефон" type="text">
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Оставьте заявку</h4>
+                </div>
+                <div class="modal-body">
+                    <form class = "js_formsubmit">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Ваше имя</label>
+                            <input type="text" class="form-control jsFormSubmitName" id="InputName"
+                                   aria-describedby="emailHelp" placeholder="Введите имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Ваш телефон</label>
+                            <input type="text" class="form-control jsFormSubmitNumber" id="InputNumber"
+                                   aria-describedby="emailHelp" placeholder="Введите телефон">
+                            <small id="emailHelp" class="form-text text-muted">Обещаем не использовать Ваш телефон для рассылок
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Есть ли у Вас вопросы?</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary modalform__submit_button">Оставить заявку</button>
+                    </form>
+                </div>
             </div>
-          </div>
-          <div class="row first_screen__form__third_row" align="center">
-            <button type="submit" data-toggle="modal" data-target="#myModal"
-                    class="about_us__CTA btn genuino__big_button">
-              Оставить заявку
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Оставь заявку, пидор</h4>
         </div>
-        <div class="modal-body">
-          <p>Сука пожалуйста</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
     </div>
-  </div>
-  </div>
+    </div>
 </section>
 <section id="second_screen">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 second_screen__header">
-        <div class="col-md-4">
-          <div class="second_screen__header__logo">
-            <img class="second_screen__header__logo_img" src="{% static 'shoes/img/logo.png' %}">
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="second_screen__header__text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 second_screen__header">
+                <div class="col-md-4">
+                    <div class="second_screen__header__logo">
+                        <img class="second_screen__header__logo_img" src="{% static 'shoes/img/logo.png' %}">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="second_screen__header__text">
                            <span class="second_screen__header__text_span">
                             Готовая пара обуви, заботливо сшитая <br> по технологии bespoke специально для вашей стопы
                             </span>
-          </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-
-
-      </div>
-    </div>
-    <div class="row four_steps_result col-sm-10 col-sm-offset-1">
-      <div class="individual__steps__div">
-        <div class="div__border__down">
+        <div class="row four_steps_result col-sm-10 col-sm-offset-1">
+            <div class="individual__steps__div">
+                <div class="div__border__down">
                         <span class="div__border__down_span">
                             4 шага до идеального результата:
                         </span>
-        </div>
-        <div class="row four_steps__margin">
-          <div class="col-md-6 col-sm-12">
-            <ol class="four_steps__list_style">
-              <li class="four_steps__li__styles" data-img="1">
+                </div>
+                <div class="row four_steps__margin">
+                    <div class="col-md-6 col-sm-12">
+                        <ol class="four_steps__list_style">
+                            <li class="four_steps__li__styles" data-img="1">
                                     <span class="ol__circle__radius">
                                         <i class="i__white__circle">1</i>
                                     </span>
-                <span class="four_steps__name">Обслуживание и выбор моделей</span>
-              </li>
-              <li class="four_steps__li__styles" data-img="2">
+                                <span class="four_steps__name">Обслуживание и выбор моделей</span>
+                            </li>
+                            <li class="four_steps__li__styles" data-img="2">
                                     <span class="ol__circle__radius">
                                         <i class="i__white__circle">2</i>
                                     </span>
-                <span class="four_steps__name">Снятие мерок индвидуально под Вашу стопу</span>
-              </li>
-              <li class="four_steps__li__styles" data-img="3">
+                                <span class="four_steps__name">Снятие мерок индвидуально под Вашу стопу</span>
+                            </li>
+                            <li class="four_steps__li__styles" data-img="3">
                                     <span class="ol__circle__radius">
                                         <i class="i__white__circle">3</i>
                                     </span>
-                <span class="four_steps__name">Основная работа над Вашей парой</span>
-              </li>
-              <li class="four_steps__li__styles" data-img="4">
+                                <span class="four_steps__name">Основная работа над Вашей парой</span>
+                            </li>
+                            <li class="four_steps__li__styles" data-img="4">
                                     <span class="ol__circle__radius">
                                         <i class="i__white__circle">4</i>
                                     </span>
-                <span class="four_steps__name">Ваша индивидуальная пара обуви</span>
-              </li>
-            </ol>
-          </div>
-          <div class="img__styles col-md-6 col-sm-12">
-            <div class="img__styles__div">
-              <img сlass="img__styles__div_img" src="{% static 'shoes/img/second_screen_1.png' %}" alt=""/>
-            </div>
-            <div>
+                                <span class="four_steps__name">Ваша индивидуальная пара обуви</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="img__styles col-md-6 col-sm-12">
+                        <div class="img__styles__div">
+                            <img сlass="img__styles__div_img" src="{% static 'shoes/img/second_screen_1.png' %}"
+                                 alt=""/>
+                        </div>
+                        <div>
                                 <span>Наш стилист и Вы, как заказчик, обсуждаете
                                 фасон и дизайн будущей пары, вид и цвет материроалов.
                                 Все это делается вместе с Вами</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 second_screen__last_row">
-        <div class="col-sm-8 second_screen__CTA">
-          <div class="second_screen__CTA_header">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 second_screen__last_row">
+                <div class="col-sm-12 second_screen__CTA">
+                    <div class="col-sm-12 second_screen__CTA_header">
                                    <span class="second_screen__CTA_header__span">
                                         Мы любим свою работу.
                                    </span>
-          </div>
-          <div class="second_screen__CTA_text">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="second_screen__CTA_text">
                                    <span class="second_screen__CTA_text__span">
-                                       Каждый день работая над своим искусством мы научились выполнять
+                                       Каждый день работая над своим искусством мы научились <br> выполнять
                                        свою работу так, что нас ценят. Оцените и Вы:
                                    </span>
-          </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="genuino__big_button btn" data-toggle="modal"
+                                data-target="#myModal">
+                            Что отличает нас?
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-          <button type="button" class="genuino__big_button btn" data-toggle="modal" data-target="#myModal">
-            Что отличает нас?
-          </button>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 <section id="third_screen">
-  <div class="container">
-    <div class="row fourth_screen__header">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="fourth_screen__big_header">
+    <div class="container">
+        <div class="row fourth_screen__header">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="fourth_screen__big_header">
                         <span class="fourth_screen__big_header__span">
                             Искусство создавать день ото дня
                         </span>
-        </div>
-        <div class="fourth_screen__small_header">
+                </div>
+                <div class="fourth_screen__small_header">
                         <span class="fourth_screen__small_header__span">
                             Каждый день Вы решаете задачи, позволяющие шаг за шагом двигаться вперед.<br>
                             Мы делаем так, чтобы все шаги были комфортными.
                         </span>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="third_screen__fivesteps col-md-4 col-md-offset-2 col-sm-12">
+                <div class="fivesteps">
+                    <div class="fivesteps_header" data-number='1'>
+                        <span class="fivesteps_header__span fivesteps_header__span__active">1. Гарантия качества</span>
+                        <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
+                    </div>
+                    <div class="fivesteps_info">
+                        <p class="fivesteps_info__p">
+                            Создание уникального дизайна и уверенность в том, что Ваша пара
+                            существует в единственном экземпляре.
+                        </p>
+                    </div>
+                </div>
+                <div class="fivesteps">
+                    <div class="fivesteps_header" data-number='2'>
+                        <span class="fivesteps_header__span">2. Индивидуальный дизайн</span>
+                        <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
+                    </div>
+                    <div class="fivesteps_info">
+                        <p class="fivesteps_info__p">
+                            Создание уникального дизайна и уверенность в том, что Ваша пара
+                            существует в единственном экземпляре.
+                        </p>
+                    </div>
+                </div>
+                <div class="fivesteps">
+                    <div class="fivesteps_header" data-number='3'>
+                        <span class="fivesteps_header__span">3. Эксклюзивные материалы</span>
+                        <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
+                    </div>
+                    <div class="fivesteps_info">
+                        <p class="fivesteps_info__p">
+                            Создание уникального дизайна и уверенность в том, что Ваша пара
+                            существует в единственном экземпляре.
+                        </p>
+                    </div>
+                </div>
+                <div class="fivesteps">
+                    <div class="fivesteps_header" data-number='4'>
+                        <span class="fivesteps_header__span">4. Ручная работа</span>
+                        <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
+                    </div>
+                    <div class="fivesteps_info">
+                        <p class="fivesteps_info__p">
+                            Создание уникального дизайна и уверенность в том, что Ваша пара
+                            существует в единственном экземпляре.
+                        </p>
+                    </div>
+                </div>
+                <div class="fivesteps">
+                    <div class="fivesteps_header" data-number='5'>
+                        <span class="fivesteps_header__span">5. Первоклассный сервис</span>
+                        <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
+                    </div>
+                    <div class="fivesteps_info">
+                        <p class="fivesteps_info__p">
+                            Создание уникального дизайна и уверенность в том, что Ваша пара
+                            существует в единственном экземпляре.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img class="fivesteps__boots__img" src="{% static 'shoes/img/screen3_boot.png' %}">
+                <img src="{% static 'shoes/img/circles_1.png' %}" data-number='1' class="fivesteps__boots__img__circle"
+                     id="fivesteps__boots__img__circle1" style="
+
+                    ">
+                <img src="{% static 'shoes/img/circles_2.png' %}" data-number='2' class="fivesteps__boots__img__circle"
+                     id="fivesteps__boots__img__circle2" style="
+
+                    ">
+                <img src="{% static 'shoes/img/circles_3.png' %}" data-number='3' class="fivesteps__boots__img__circle"
+                     id="fivesteps__boots__img__circle3" style="
+
+                    ">
+                <img src="{% static 'shoes/img/circles_4.png' %}" data-number='4' class="fivesteps__boots__img__circle"
+                     id="fivesteps__boots__img__circle4" style="
+
+                    ">
+                <img src="{% static 'shoes/img/circles_5.png' %}" data-number='5' class="fivesteps__boots__img__circle"
+                     id="fivesteps__boots__img__circle5" style="
+
+                    ">
+            </div>
+        </div>
+        <div class="row third_screen__CTA" align="center">
+            <button type="button" class="third_screen__CTA__button btn genuino__big_button" data-toggle="modal"
+                    data-target="#myModal">
+                Выбрать пару
+            </button>
+        </div>
     </div>
-    <div class="row">
-      <div class="third_screen__fivesteps col-md-4 col-md-offset-2 col-sm-12">
-        <div class="fivesteps">
-          <div class="fivesteps_header" data-number='1'>
-            <span class="fivesteps_header__span fivesteps_header__span__active">1. Гарантия качества</span>
-            <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
-          </div>
-          <div class="fivesteps_info">
-            <p class="fivesteps_info__p">
-              Создание уникального дизайна и уверенность в том, что Ваша пара
-              существует в единственном экземпляре.
-            </p>
-          </div>
-        </div>
-        <div class="fivesteps">
-          <div class="fivesteps_header" data-number='2'>
-            <span class="fivesteps_header__span">2. Индивидуальный дизайн</span>
-            <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
-          </div>
-          <div class="fivesteps_info">
-            <p class="fivesteps_info__p">
-              Создание уникального дизайна и уверенность в том, что Ваша пара
-              существует в единственном экземпляре.
-            </p>
-          </div>
-        </div>
-        <div class="fivesteps">
-          <div class="fivesteps_header" data-number='3'>
-            <span class="fivesteps_header__span">3. Эксклюзивные материалы</span>
-            <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
-          </div>
-          <div class="fivesteps_info">
-            <p class="fivesteps_info__p">
-              Создание уникального дизайна и уверенность в том, что Ваша пара
-              существует в единственном экземпляре.
-            </p>
-          </div>
-        </div>
-        <div class="fivesteps">
-          <div class="fivesteps_header" data-number='4'>
-            <span class="fivesteps_header__span">4. Ручная работа</span>
-            <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
-          </div>
-          <div class="fivesteps_info">
-            <p class="fivesteps_info__p">
-              Создание уникального дизайна и уверенность в том, что Ваша пара
-              существует в единственном экземпляре.
-            </p>
-          </div>
-        </div>
-        <div class="fivesteps">
-          <div class="fivesteps_header" data-number='5'>
-            <span class="fivesteps_header__span">5. Первоклассный сервис</span>
-            <img src="{% static 'shoes/img/screen3_question.png' %}" class="fivesteps_header__img">
-          </div>
-          <div class="fivesteps_info">
-            <p class="fivesteps_info__p">
-              Создание уникального дизайна и уверенность в том, что Ваша пара
-              существует в единственном экземпляре.
-            </p>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <img class="fivesteps__boots__img" src="{% static 'shoes/img/screen3_boot.png' %}">
-        <img src="{% static 'shoes/img/circles_1.png' %}" data-number='1' class="fivesteps__boots__img__circle"
-             id="fivesteps__boots__img__circle1" style="
-
-                    ">
-        <img src="{% static 'shoes/img/circles_2.png' %}" data-number='2' class="fivesteps__boots__img__circle"
-             id="fivesteps__boots__img__circle2" style="
-
-                    ">
-        <img src="{% static 'shoes/img/circles_3.png' %}" data-number='3' class="fivesteps__boots__img__circle"
-             id="fivesteps__boots__img__circle3" style="
-
-                    ">
-        <img src="{% static 'shoes/img/circles_4.png' %}" data-number='4' class="fivesteps__boots__img__circle"
-             id="fivesteps__boots__img__circle4" style="
-
-                    ">
-        <img src="{% static 'shoes/img/circles_5.png' %}" data-number='5' class="fivesteps__boots__img__circle"
-             id="fivesteps__boots__img__circle5" style="
-
-                    ">
-      </div>
-    </div>
-    <div class="row third_screen__CTA" align="center">
-      <button type="button" class="third_screen__CTA__button btn genuino__big_button" data-toggle="modal"
-              data-target="#myModal">
-        Выбрать пару
-      </button>
-    </div>
-  </div>
 </section>
 <section id="fourth_screen">
-  <div class="container">
-    <div class="row fourth_screen__header">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="fourth_screen__big_header">
+    <div class="container">
+        <div class="row fourth_screen__header">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="fourth_screen__big_header">
                         <span class="fourth_screen__big_header__span">
                             Genuino Handcraft. Обувь ручной работы
                         </span>
-        </div>
-        <div class="fourth_screen__small_header">
+                </div>
+                <div class="fourth_screen__small_header">
                         <span class="fourth_screen__small_header__span">
                             Все работы включают в себя снятие мерок, выбор подходящей модели и материалов,
                             индивидуальную доработку колодок, производство и доставку готовой пары обуви.
                         </span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row fourth_screen__second_row">
-      <div class="col-md-3">
-        <div class="fourth_screen__card_header">
-          <div class="fourth_screen__card_header__header">
-            <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
-          </div>
-          <div class="fourth_screen__card_header__content">
+        <div class="row fourth_screen__second_row">
+            <div class="col-md-3">
+                <div class="fourth_screen__card_header">
+                    <div class="fourth_screen__card_header__header">
+                        <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
+                    </div>
+                    <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Пошив любой модели из нашей коллекции туфель
-                            </span>
-          </div>
-        </div>
-        <div class="fourth_screen__card_content">
-          <div class="fourth_screen__card_content__price">
-            18 500
-          </div>
-          <div class="fourth_screen__card_content__text">
-            Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
-            методы крепления - GoodYear Welt.
-          </div>
-          <div class="fourth_screen__card_content__CTA">
-            <button data-toggle="modal" data-target="#myModal"
-                    class="fourth_screen__card_content__CTA_button btn genuino__small_button">
-              Оставить заявку
-            </button>
-          </div>
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
 
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="fourth_screen__card_header">
-          <div class="fourth_screen__card_header__header">
-            <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
-          </div>
-          <div class="fourth_screen__card_header__content">
+                            </span>
+                    </div>
+                </div>
+                <div class="fourth_screen__card_content">
+                    <div class="fourth_screen__card_content__price">
+                        18 500
+                    </div>
+                    <div class="fourth_screen__card_content__text">
+                        Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
+                        методы крепления - GoodYear Welt.
+                    </div>
+                    <div class="fourth_screen__card_content__CTA">
+                        <button data-toggle="modal" data-target="#myModal"
+                                class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="fourth_screen__card_header">
+                    <div class="fourth_screen__card_header__header">
+                        <span class="fourth_screen__card_header__header_span">Пошив ботинок</span>
+                    </div>
+                    <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Пошив любой модели из нашей коллекции ботинок.
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
-          </div>
-        </div>
-        <div class="fourth_screen__card_content">
-          <div class="fourth_screen__card_content__price">
-            18 500
-          </div>
-          <div class="fourth_screen__card_content__text">
-            Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
-            методы крепления - GoodYear Welt.
-          </div>
-          <div class="fourth_screen__card_content__CTA">
-            <button data-toggle="modal" data-target="#myModal"
-                    class="fourth_screen__card_content__CTA_button btn genuino__small_button">
-              Оставить заявку
-            </button>
-          </div>
 
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="fourth_screen__card_header">
-          <div class="fourth_screen__card_header__header">
-            <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
-          </div>
-          <div class="fourth_screen__card_header__content">
+                    </div>
+                </div>
+                <div class="fourth_screen__card_content">
+                    <div class="fourth_screen__card_content__price">
+                        20 900
+                    </div>
+                    <div class="fourth_screen__card_content__text">
+                        Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
+                        методы крепления - GoodYear Welt.
+                    </div>
+                    <div class="fourth_screen__card_content__CTA">
+                        <button data-toggle="modal" data-target="#myModal"
+                                class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="fourth_screen__card_header">
+                    <div class="fourth_screen__card_header__header">
+                        <span class="fourth_screen__card_header__header_span">Зимние ботинки</span>
+                    </div>
+                    <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Пошив любой модели из нашей коллекции
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
-          </div>
-        </div>
-        <div class="fourth_screen__card_content">
-          <div class="fourth_screen__card_content__price">
-            18 500
-          </div>
-          <div class="fourth_screen__card_content__text">
-            Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
-            методы крепления - GoodYear Welt.
-          </div>
-          <div class="fourth_screen__card_content__CTA">
-            <button data-toggle="modal" data-target="#myModal"
-                    class="fourth_screen__card_content__CTA_button btn genuino__small_button">
-              Оставить заявку
-            </button>
-          </div>
 
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="fourth_screen__card_header">
-          <div class="fourth_screen__card_header__header">
-            <span class="fourth_screen__card_header__header_span">Пошив туфель</span>
-          </div>
-          <div class="fourth_screen__card_header__content">
+                    </div>
+                </div>
+                <div class="fourth_screen__card_content">
+                    <div class="fourth_screen__card_content__price">
+                        23 900
+                    </div>
+                    <div class="fourth_screen__card_content__text">
+                        Верх обуви натуральная телячья кожа и/или замша, подошва - термоаластопласт.
+                        Мех - натуральная овчина.
+                    </div>
+                    <div class="fourth_screen__card_content__CTA">
+                        <button data-toggle="modal" data-target="#myModal"
+                                class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="fourth_screen__card_header">
+                    <div class="fourth_screen__card_header__header">
+                        <span class="fourth_screen__card_header__header_span">Другие модели</span>
+                    </div>
+                    <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
-                                Пошив любой модели из нашей коллекции туфель
+                                Модель на Ваш выбор, которой нет в нашей коллекции
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
-          </div>
-        </div>
-        <div class="fourth_screen__card_content">
-          <div class="fourth_screen__card_content__price">
-            18 500
-          </div>
-          <div class="fourth_screen__card_content__text">
-            Верх обуви натуральная телячья кожа и/или замша, подошва - кожа,
-            методы крепления - GoodYear Welt.
-          </div>
-          <div class="fourth_screen__card_content__CTA">
-            <button data-toggle="modal" data-target="#myModal"
-                    class="fourth_screen__card_content__CTA_button btn genuino__small_button">
-              Оставить заявку
-            </button>
-          </div>
+                    </div>
+                </div>
+                <div class="fourth_screen__card_content">
+                    <div class="fourth_screen__card_content__price">
+                        21 500
+                    </div>
+                    <div class="fourth_screen__card_content__text">
+                        Верх обуви ЛЮБАЯ натуральная кожа и/или замша, подошва - кожа,
+                        методы крепления - GoodYear Welt.
+                    </div>
+                    <div class="fourth_screen__card_content__CTA">
+                        <button data-toggle="modal" data-target="#myModal"
+                                class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                        </button>
+                    </div>
 
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 fourth_screen__CTA">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 fourth_screen__CTA">
                     <span class="fourth_screen__CTA_header">
                         Если в процессе выбора у Вас возникли вопросы, напишите нам.
                     </span>
-        <br>
+                <br>
                     <span class="fourth_screen__CTA_subheader">
                         Мы ответим на них и поможем разобраться во всех тонкостях
                     </span>
-      </div>
+            </div>
+        </div>
+        <div class="row fourth_screen__CTA_buttons">
+            <div class="col-md-6 col-md-offset-3">
+                <button data-toggle="modal" data-target="#myModal" class="btn genuino__big_button">
+                    Задайте вопрос
+                </button>
+                ИЛИ
+                <button class="btn genuino__big_button genuino__big_button__call">
+          <span class="genuino__big_button__call__text">Позвоните нам <br>
+          +7(977)1234567 </span>
+            <span id="genuino__big_button__call__onlynumber">
+                +7(977)1234567
+            </span>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="row fourth_screen__CTA_buttons">
-      <div class="col-md-6 col-md-offset-3">
-        <button data-toggle="modal" data-target="#myModal" class="btn genuino__big_button">
-          Задайте вопрос
-        </button>
-        ИЛИ
-        <button class="btn genuino__big_button genuino__big_button__call">
-          Позвоните нам <br>
-          +7(977)1234567
-        </button>
-      </div>
-    </div>
-  </div>
 </section>
 <section id="fifth_screen">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <div class="fifth_screen__thanks">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="fifth_screen__thanks">
                         <span class="fifth_screen__thanks_span">
                         Спасибо, что были с нами !
                     </span>
-        </div>
-        <div class="fifth_screen__excuse">
+                </div>
+                <div class="fifth_screen__excuse">
                         <span class="fifth_screen__excuse_span">
                             Мы просим прощения, что возможно были непоследовательны
                         </span>
-        </div>
-        <div class="fifth_screen__correct">
+                </div>
+                <div class="fifth_screen__correct">
                         <span class="fifth_screen__correct_span">
                             GENUINO - семейный бизнес, у нас лишь 3 мастера и 2 организатора из нашего нового поколения,
                             так что если Вы нашли ошибки или отвлекающие Вас элементы - напишите нам об этом.
                         </span>
-        </div>
-        <div class="fifth_screen__CTA" align="center">
-          <button data-toggle="modal" data-target="#myModal" class="btn genuino__big_button">
-            Написать нам
-          </button>
-        </div>
-      </div>
-      <div class="col-md-6 col-md-offset-3 fifth_screen__footer">
-        <div class="col-md-4 col-xs-4">
-          <div class="fifth_screen__footer__img">
-            <img class="fifth_screen__header__logo_img" src="{% static 'shoes/img/logo.png' %}">
-          </div>
-        </div>
-        <div class="col-md-8 col-xs-8">
-          <div class="fifth_screen__footer__text">
+                </div>
+                <div class="fifth_screen__CTA" align="center">
+                    <button data-toggle="modal" data-target="#myModal" class="btn genuino__big_button">
+                        Написать нам
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3 fifth_screen__footer">
+                <div class="col-md-4 col-xs-4">
+                    <div class="fifth_screen__footer__img">
+                        <img class="fifth_screen__header__logo_img" src="{% static 'shoes/img/logo.png' %}">
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="fifth_screen__footer__text">
                            <span class="fifth_screen__footer__text_span">
                             Мы будем очень благодарны <br> если Вы расскажете о нас друзьям
                             </span>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <section id="footer">
-  <div class="container">
-    <div class="row"></div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" align="center">
+                <span>
+                    GENUINO<br>HandCraft
+                </span>
+            </div>
+            <div class="col-sm-4" align="center">
+                <span>
+                    Телефон:<br>
+                    +7(977)-342-74-88
+                </span>
+            </div>
+            <div class="col-sm-4" align="center">
+                <button data-toggle="modal" data-target="#myModal" class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                            Оставить заявку
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
+<script src="{% static 'shoes/js/mask.js' %}"></script>
+<script src="{% static 'shoes/js/index.js' %}"></script>
+<script src="{% static 'shoes/js/sweetalert.min.js' %}"></script>
 </body>
 </html>
