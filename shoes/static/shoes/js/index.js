@@ -58,7 +58,7 @@ $(document).ready(function () {
     //открываем первую шнягу
     var firstLoadOpening = $(".fivesteps_header[data-number='1']");
     $(".fivesteps__boots__img__circle[data-number='1']").attr('src', static_prefix + 'img/circles_1_1.png');
-    firstLoadOpening.parent().find(".fivesteps_info").show("slow");
+    firstLoadOpening.parent().find(".fivesteps_info").slideDown("slow");
     firstLoadOpening.find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
     firstLoadOpening.find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
 
@@ -74,9 +74,9 @@ $(document).ready(function () {
         //возвращаем все назад
         $(".fivesteps_header__span").removeClass('fivesteps_header__span__active');
         $(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_question.png');
-        $(".fivesteps_info").hide();
+        $(".fivesteps_info").slideUp();
         //а вот тут уже открываем
-        $(this).parent().find(".fivesteps_info").show("slow");
+        $(this).parent().find(".fivesteps_info").slideDown("slow");
         $(this).find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
         $(this).find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
     });
@@ -91,10 +91,10 @@ $(document).ready(function () {
         //возвращаем все назад
         $(".fivesteps_header__span").removeClass('fivesteps_header__span__active');
         $(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_question.png');
-        $(".fivesteps_info").hide();
+        $(".fivesteps_info").slideUp();
         //а вот тут уже открываем
         var targetElement = $(".fivesteps_header[data-number='" + number + "']");
-        targetElement.parent().find(".fivesteps_info").show("slow");
+        targetElement.parent().find(".fivesteps_info").slideDown("slow");
         targetElement.find(".fivesteps_header__span").addClass('fivesteps_header__span__active');
         targetElement.find(".fivesteps_header__img").attr("src", static_prefix + 'img/screen3_answer.png');
 
@@ -159,25 +159,26 @@ $(document).ready(function () {
               ajaxPost(url, myForm, function(e){
                   console.log(e);
                   newThis.find('#id_name').val('');
-                  newThis.find('#id_PHONE').val('');
+                  newThis.find('#id_phone').val('');
                   swal("Спасибо!", "Заявка принята в обработку.", "success");
+                  //Закрываем модальное окно
+                  newThis.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
               });
               return false;
         }
         return false;
     });
-    $(".phone-validator").mask("+7 (999) 999 99 99");
+    $(".jsFormSubmitNumber").mask("+7 (999) 999 99 99")
+                            .on("blur", function() {
+                            var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
 
-    $(".phone-validator").on("blur", function() {
-        var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
+                            if( last.length == 3 ) {
+                                var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
+                                var lastfour = move + last;
+                                var first = $(this).val().substr( 0, 9 );
 
-        if( last.length == 3 ) {
-            var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
-            var lastfour = move + last;
-            var first = $(this).val().substr( 0, 9 );
-
-            $(this).val( first + '-' + lastfour );
-        }
+                                $(this).val( first + '-' + lastfour );
+                            }
     });
 
 });
