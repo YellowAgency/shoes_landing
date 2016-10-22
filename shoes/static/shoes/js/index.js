@@ -151,7 +151,6 @@ $(document).ready(function () {
         }
         if ($(this).find('#id_name').val()&&$(this).find('#id_phone').val()){
               var myForm = $(this).serializeArray();
-                console.log(myForm);
               var newThis = $(this);
               $(this).find('.name__span__error').hide();
               $(this).find('.phone__span__error').hide();
