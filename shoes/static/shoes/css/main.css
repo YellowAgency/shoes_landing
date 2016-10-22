@@ -5,6 +5,13 @@ body section{
     min-height:100vh;
     padding-top: 7vh;
 }
+
+
+@media (max-width: 894px) and (min-width: 750px){
+    ul.nav.navbar-nav.navbar-right{
+    font-size: 10px;
+    }
+}
 .underlined{
     padding-bottom: 3px;
     border-bottom: 1px solid black;
@@ -84,6 +91,7 @@ body section{
     padding: 3px 6px;
     background-color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .aboutus__row {
@@ -362,6 +370,7 @@ body section{
     min-height: 20px;
     margin-top: 10px;
     background-color: #cccccc;
+    cursor: pointer;
 }
 
 .fivesteps_header {
@@ -402,6 +411,7 @@ body section{
 
     .fivesteps__boots__img__circle {
         height: 35px;
+        cursor: pointer;
     }
 
     #fivesteps__boots__img__circle1 {
@@ -443,6 +453,7 @@ body section{
 
     .fivesteps__boots__img__circle {
         height: 45px;
+        cursor: pointer;
     }
 
     #fivesteps__boots__img__circle1 {
@@ -535,6 +546,7 @@ body section{
 }
 .fourth_screen__card_header__content_img{
     height: 15px;
+    cursor: pointer;
 }
 
 .fourth_screen__card_content {
@@ -648,7 +660,7 @@ body section{
 }
 
 #first_screen .container {
-    margin-top: 50px;
+    margin-top: 20px;
     padding-bottom: 40px;
 }
 
@@ -679,6 +691,11 @@ body section{
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #151516;
+}
+
+.footer__last__column{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 .modalform__submit_button{
     color: black !important;
