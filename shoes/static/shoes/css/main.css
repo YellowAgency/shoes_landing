@@ -1,9 +1,14 @@
 body {
     font-family: 'Playfair Display', serif !important;
 }
-body section{
+@media (min-width: 900px){
+    body section{
     min-height:100vh;
     padding-top: 7vh;
+}
+}
+body section{
+    min-height:100vh;
 }
 
 

@@ -106,40 +106,6 @@ $(document).ready(function () {
         $(".img__styles__div").find('img').attr("src", static_prefix + 'img/second_screen_' + picture + '.png');
     });
 
-    // //Вот тут перехватываю сабмит формы
-    // $(".js_formsubmit").submit(function(e){
-    //     (e).preventDefault();
-    //     var myForm = $(this);
-    //     if (!myForm.find(".jsFormSubmitName").val()){
-    //         alert('Enter name');
-    //     }
-    //     if (!myForm.find(".jsFormSubmitNumber").val()){
-    //         alert('Enter phone');
-    //     }
-    //     if (myForm.find(".jsFormSubmitName").val() && myForm.find(".jsFormSubmitNumber").val()){
-    //         //Почистить поля
-    //         myForm.find(".jsFormSubmitName").val('');
-    //         myForm.find(".jsFormSubmitNumber").val('');
-    //         //Swal - успех
-    //         swal("Спасибо!", "Заявка принята в обработку.", "success");
-    //         //Закрываем модальное окно
-    //         myForm.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
-    //     }
-    // });
-    //
-    // $(".jsFormSubmitNumber").mask("+7 (999) 999 99 99")
-    //                         .on("blur", function() {
-    //     var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
-    //
-    //     if( last.length == 3 ) {
-    //         var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
-    //         var lastfour = move + last;
-    //         var first = $(this).val().substr( 0, 9 );
-    //
-    //         $(this).val( first + '-' + lastfour );
-    //     }
-    // });
-
      $('.js_formsubmit').submit(function(e){
         e.preventDefault();
         var url = $(this).attr('action');
@@ -179,5 +145,14 @@ $(document).ready(function () {
                                 $(this).val( first + '-' + lastfour );
                             }
     });
+
+    //Плавный скролл
+    $('.js__navbar__button').click(function(e){
+        e.preventDefault();
+        $.smoothScroll({
+          scrollElement: $('body'),
+          scrollTarget: $(this).attr('href')
+        });
+    })
 
 });
