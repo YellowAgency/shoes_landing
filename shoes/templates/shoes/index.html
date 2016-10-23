@@ -9,6 +9,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'shoes/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'shoes/css/styles_for_nav.css' %}" rel="stylesheet">
     <link href="{% static 'shoes/css/sweetalert.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,6 +20,30 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div data-spy="affix" id="dot-nav">
+    <ul >
+      <li class="awesome-tooltip active" title="Home">
+          <a href="#home">
+              <span class = "dot-nav__li__span">О нас</span>
+          </a>
+      </li>
+      <li class="awesome-tooltip" title="About">
+          <a href="#about">
+              <span class = "dot-nav__li__span">Индивидуальный подход</span>
+          </a>
+      </li>
+      <li class="awesome-tooltip" title="Projects">
+          <a href="#projects">
+              <span class = "dot-nav__li__span">Пошив на заказ</span>
+          </a>
+      </li>
+      <li class="awesome-tooltip" title="Contact">
+          <a href="#contact">
+              <span class = "dot-nav__li__span">Контакты</span>
+          </a>
+      </li>
+    </ul>
+</div>
 <nav id="genuino__nav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
