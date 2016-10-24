@@ -93,9 +93,9 @@ WSGI_APPLICATION = 'shoes_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env_var('LOCAL_DB_NAME'),
-        'USER': env_var('LOCAL_DB_USER'),
-        'PASSWORD': env_var('LOCAL_DB_PASSWORD'),
+        'NAME': env_var('LOCAL_DB_NAME') or '',
+        'USER': env_var('LOCAL_DB_USER') or '',
+        'PASSWORD': env_var('LOCAL_DB_PASSWORD') or '',
         'HOST': 'localhost',
         'PORT': '',
     },
@@ -105,8 +105,8 @@ DATABASES = {
     }
 }
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
