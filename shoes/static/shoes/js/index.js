@@ -135,6 +135,7 @@ $(document).ready(function () {
                   console.log(e);
                   newThis.find('#id_name').val('');
                   newThis.find('#id_phone').val('');
+                  dataLayer.push({'event':'contactFormSent'})
                   swal("Спасибо!", "Заявка принята в обработку.", "success");
                   //Закрываем модальное окно
                   newThis.parent().parent().find("[data-dismiss=modal]").trigger({ type: "click" });
