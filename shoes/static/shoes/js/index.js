@@ -22,37 +22,47 @@ $(document).ready(function () {
     $("#first_screen").hover(
         function(){
             $("#js__navbar__about").find("span").addClass('underlined');
+            $("#dot-nav").find(".first").addClass('active');
         },
         function(){
             $("#js__navbar__about").find("span").removeClass('underlined');
+            $("#dot-nav").find(".first").removeClass('active');
     });
     $("#second_screen").hover(
         function(){
             $("#js__navbar__individual").find("span").addClass('underlined');
+            $("#dot-nav").find(".second").addClass('active');
         },
         function(){
             $("#js__navbar__individual").find("span").removeClass('underlined');
+            $("#dot-nav").find(".second").removeClass('active');
     });
     $("#third_screen").hover(
         function(){
             $("#js__navbar__order").find("span").addClass('underlined');
+            $("#dot-nav").find(".third").addClass('active');
         },
         function(){
             $("#js__navbar__order").find("span").removeClass('underlined');
+            $("#dot-nav").find(".third").removeClass('active');
     });
     $("#fourth_screen").hover(
         function(){
             $("#js__navbar__order").find("span").addClass('underlined');
+            $("#dot-nav").find(".third").addClass('active');
         },
         function(){
             $("#js__navbar__order").find("span").removeClass('underlined');
+            $("#dot-nav").find(".third").removeClass('active');
     });
     $("#fifth_screen").hover(
         function(){
             $("#js__navbar__contacts").find("span").addClass('underlined');
+            $("#dot-nav").find(".fourth").addClass('active');
         },
         function(){
             $("#js__navbar__contacts").find("span").removeClass('underlined');
+            $("#dot-nav").find(".fourth").removeClass('active');
     });
 
     //открываем первую шнягу
@@ -146,13 +156,31 @@ $(document).ready(function () {
                             }
     });
 
-    //Плавный скролл
+    //Плавный скролл в навигации
     $('.js__navbar__button').click(function(e){
         e.preventDefault();
         $.smoothScroll({
           scrollElement: $('body'),
           scrollTarget: $(this).attr('href')
         });
-    })
+    });
+
+    //Появление надписей рядом с точками
+    $(".awesome-tooltip").hover(function(){
+        $(this).find("span").fadeIn();
+    },
+    function(){
+        $(this).find("span").fadeOut();
+    });
+
+    //Плавный скролл для точек
+    $(".js_sidebar_nav").click(function(e){
+        e.preventDefault();
+        $.smoothScroll({
+          scrollElement: $('body'),
+          scrollTarget: $(this).find('a').attr('href')
+        });
+    });
+
 
 });
