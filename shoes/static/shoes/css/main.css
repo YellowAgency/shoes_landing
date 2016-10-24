@@ -40,7 +40,7 @@ body section{
 }
 #genuino__nav {
     color: black;
-    background-color: #c5c5c2 !important;
+    background-color: #f9f9f6 !important;
     border-color: #c5c5c2 !important;
 }
 
@@ -107,7 +107,7 @@ body section{
 }
 
 .navbar__CTA_span {
-    border: 1px solid white;
+    border: 1px solid #8c8c8c;
     padding: 3px 6px;
     background-color: white;
     border-radius: 5px;
@@ -525,7 +525,7 @@ body section{
 
 .fourth_screen__big_header__span {
     display: inline-block;
-    font-size: 22px;
+    font-size: 2em;
     color: white;
     border-bottom: 1px solid white;
     padding-bottom: 12px;
@@ -533,7 +533,7 @@ body section{
 
 .fourth_screen__small_header {
     padding-top: 10px;
-    font-size: 12px;
+    font-size: 1em;
     color: white;
 }
 
