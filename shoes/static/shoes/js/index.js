@@ -1,6 +1,11 @@
 /**
  * Created by sp41mer on 04.10.16.
  */
+window.sr = ScrollReveal();
+sr.reveal('.revealOnScroll');
+sr.reveal('.row');
+
+//JQUERY things
 $(document).ready(function () {
     // говнокод на говнокод - кек, Санёк
     // ЛОООООООООООООООЛ
@@ -168,10 +173,10 @@ $(document).ready(function () {
 
     //Появление надписей рядом с точками
     $(".awesome-tooltip").hover(function(){
-        $(this).find("span").fadeIn();
+        $(this).find("span").fadeIn(250);
     },
     function(){
-        $(this).find("span").fadeOut();
+        $(this).find("span").fadeOut(250);
     });
 
     //Плавный скролл для точек
