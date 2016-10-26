@@ -136,10 +136,11 @@ body section{
     padding-bottom: 20px;
 }
 
-.about_us_div_main_header {
-    /*margin-top: 8%;*/
+@media (max-width: 998px) {
+    .about_us_div_main_header {
+    margin-top: 12vh;
 }
-
+}
 .aboutus__div__list__header_dot{
     margin-right: 4px;
     font-size: 22px;
