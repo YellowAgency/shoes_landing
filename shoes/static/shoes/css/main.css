@@ -88,7 +88,7 @@ body section{
 
 @media (min-width: 999px) {
     #first_screen {
-        background-image: url("../img/screen1_bg.png");
+        background-image: url("../img/shoes2.png");
         background-size: cover;
 
     }
@@ -177,8 +177,9 @@ body section{
 
 .first_screen__form__first_row__span {
     display: inline-block;
-    color: white;
-    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 26px;
     padding-bottom: 2px;
     border-bottom: 1px solid white;
 }
