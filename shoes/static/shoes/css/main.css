@@ -88,7 +88,7 @@ body section{
 
 @media (min-width: 999px) {
     #first_screen {
-        background-image: url("../img/shoes2-min.png");
+        background-image: url("../img/screen1_bg-min.png");
         background-size: cover;
 
     }
