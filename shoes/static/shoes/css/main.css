@@ -348,6 +348,13 @@ body section{
     height: 150px;
 }
 
+.img__styles span{
+    display: none;
+}
+.img__styles_span.active{
+    display: inline-block;
+}
+
 @media (max-width: 998px) {
     .second_screen__last_row {
         border-top: 1px solid white;

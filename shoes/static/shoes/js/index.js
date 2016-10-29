@@ -118,6 +118,7 @@ $(document).ready(function () {
         var picture = $(this).data('img');
         $('.ol__circle__radius').removeClass('ol__circle__radius_clicked');
         $(this).find('.ol__circle__radius').addClass('ol__circle__radius_clicked');
+        $(".img__styles__div").parent().find('span').removeClass('active').parent().find('.'+picture).addClass('active');
         $(".img__styles__div").find('img').attr("src", static_prefix + 'img/second_screen_' + picture + '.png');
     });
 
