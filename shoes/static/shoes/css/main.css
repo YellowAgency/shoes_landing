@@ -177,10 +177,10 @@ body section{
 
 .first_screen__form__first_row__span {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:rgba(82, 66, 66, 0.3);
     color: #ffffff;
     font-size: 26px;
-    padding-bottom: 2px;
+    padding: 0px 3px 2px 3px;
     border-bottom: 1px solid white;
 }
 
@@ -303,6 +303,8 @@ body section{
     .four_steps__li__styles {
         text-align: left;
         padding: 20px 0px 20px 0px;
+        margin-bottom: 2vh;
+        font-size: 1.2em;
     }
 }
 
@@ -345,7 +347,7 @@ body section{
 }
 
 .img__styles__div img {
-    height: 150px;
+    height: 200px;
 }
 
 .img__styles span{
