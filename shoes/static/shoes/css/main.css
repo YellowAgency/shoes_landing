@@ -636,17 +636,17 @@ body section{
 }
 
 .fifth_screen__thanks_span {
+    font-size: 2em;
     padding-bottom: 5px;
     border-bottom: 1px solid white;
 }
 
 .fifth_screen__excuse {
     text-align: center;
-    font-size: 20px;
 }
 
 .fifth_screen__excuse_span {
-
+font-size: 1.5em;
 }
 
 .fifth_screen__correct {
@@ -655,7 +655,7 @@ body section{
 }
 
 .fifth_screen__correct_span {
-
+font-size: 1.2em;
 }
 
 .fifth_screen__CTA {
@@ -706,14 +706,18 @@ body section{
 }
 
 #fifth_screen {
-    background-color: #151516;
+    background-image: url("../img/handshake-min.png");
+    background-size: cover;
     color: white;
 }
 
 #fifth_screen .container {
     padding-bottom: 30px;
 }
+.big_footer{
+}
 #footer{
+    min-height: 25vh !important;
     border-top: 1px solid white;
     color: white;
     font-size: 18px;
