@@ -597,6 +597,14 @@ body section{
     font-size: 20px;
 }
 
+@media (min-width: 999px) {
+    .fourth_screen__card_content__text {
+    height: 70px;
+}
+    .fourth_screen__card_header__content{
+      height: 40px;  
+    }
+}
 .fourth_screen__card_content__text {
     padding: 0px 12px 25px 12px;
     font-size: 12px;
