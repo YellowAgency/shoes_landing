@@ -95,15 +95,27 @@ body section{
 }
 
 .about_us__div_first_p {
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.first_screen__advantages_dot{
+    padding-top: 20px;
+}
+.first_screen__advantages_text{
+    padding-top: 20px;
 }
 
 .about_us__text p {
+    margin-top: 10vh;
     font-size: 12px;
 }
 
 .first_screen__aboutus__list {
     list-style: none;
+}
+
+.first_screen__advantages{
+    margin-top: 5vh;
 }
 
 .navbar__CTA_span {
@@ -119,7 +131,7 @@ body section{
 }
 
 .aboutus__div__list__header {
-    font-size: 16px;
+    font-size: 1.4em;
 
 }
 
@@ -143,7 +155,7 @@ body section{
 }
 .aboutus__div__list__header_dot{
     margin-right: 4px;
-    font-size: 22px;
+    font-size: 1.6em;
     color: black;
 }
 
@@ -173,6 +185,11 @@ body section{
     .first_screen__form__first_row {
         margin-top: 380px;
     }
+}
+
+.first_screen__logo_horizontal{
+    height: 140px;
+    width:340px;
 }
 
 .first_screen__form__first_row__span {

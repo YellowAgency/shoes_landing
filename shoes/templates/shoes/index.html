@@ -12,11 +12,18 @@
     <link href="{% static 'shoes/css/sweetalert.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NZK87P');</script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NZK87P');</script>
     <!-- End Google Tag Manager -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
@@ -28,32 +35,34 @@
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZK87P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZK87P"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div data-spy="affix" id="dot-nav">
-    <ul >
-      <li class="awesome-tooltip first js_sidebar_nav">
-          <a href="#first_screen">
-              <span class = "dot-nav__li__span">О нас</span>
-          </a>
-      </li>
-      <li class="awesome-tooltip second js_sidebar_nav">
-          <a href="#second_screen">
-              <span class = "dot-nav__li__span">Индивидуальный подход</span>
-          </a>
-      </li>
-      <li class="awesome-tooltip third js_sidebar_nav">
-          <a href="#third_screen">
-              <span class = "dot-nav__li__span">Пошив на заказ</span>
-          </a>
-      </li>
-      <li class="awesome-tooltip fourth js_sidebar_nav">
-          <a href="#fourth_screen">
-              <span class = "dot-nav__li__span">Контакты</span>
-          </a>
-      </li>
+    <ul>
+        <li class="awesome-tooltip first js_sidebar_nav">
+            <a href="#first_screen">
+                <span class="dot-nav__li__span">О нас</span>
+            </a>
+        </li>
+        <li class="awesome-tooltip second js_sidebar_nav">
+            <a href="#second_screen">
+                <span class="dot-nav__li__span">Индивидуальный подход</span>
+            </a>
+        </li>
+        <li class="awesome-tooltip third js_sidebar_nav">
+            <a href="#third_screen">
+                <span class="dot-nav__li__span">Пошив на заказ</span>
+            </a>
+        </li>
+        <li class="awesome-tooltip fourth js_sidebar_nav">
+            <a href="#fourth_screen">
+                <span class="dot-nav__li__span">Контакты</span>
+            </a>
+        </li>
     </ul>
 </div>
 <nav id="genuino__nav" class="navbar navbar-default navbar-fixed-top">
@@ -72,7 +81,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li><a class="js__navbar__button" id="js__navbar__order"
                        href="#third_screen"><span>Пошив на заказ</span></a></li>
-                <li><a class="js__navbar__button" id="js__navbar__contacts" href="#fifth_screen"><span>Контакты</span></a>
+                <li><a class="js__navbar__button" id="js__navbar__contacts"
+                       href="#fifth_screen"><span>Контакты</span></a>
                 </li>
                 <li>
                     <a data-toggle="modal" data-target="#myModal">
@@ -89,47 +99,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <div class="row aboutus__row ">
             <div class="col-md-5 col-sm-12 about_us__div">
-                <h4 class="about_us_div_main_header">
-                    GENUINO HandCraft:
-                </h4>
+                <div class="row" align="center">
+                    <img class="first_screen__logo_horizontal" src="{% static 'shoes/img/logo_horizontal.png' %}">
+                </div>
+                <div class="about_us__text clearfix">
+                    <div class="first_screen__advantages">
+                        <div class="col-sm-1">
+                            <span class="aboutus__div__list__header_dot">●</span>
+                        </div>
+                        <div class="col-sm-11">
+                            <span class="aboutus__div__list__header">
 
-                <p class="about_us_div_main_p">
-                    индивидуальный пошив<br>
-                    классической мужской обуви
-                </p>
+                            Персональное снятие мерок с клиентов
+                        </span>
+                            <br>
+                            Выезд специалиста в любую точку Москвы и МО в любое удобное для Вас время.
+                        </div>
+                    </div>
+                    <div class="first_screen__advantages">
+                        <div class="col-sm-1 first_screen__advantages_dot">
+                            <span class="aboutus__div__list__header_dot">●</span>
+                        </div>
+                        <div class="col-sm-11 first_screen__advantages_text">
+                            <span class="aboutus__div__list__header">
 
-                <div class="about_us__text">
-                    <h4 class="about_us__div__header">Узнайте больше о том, как мы создаем искусство</h4>
-                    <img src="{% static 'shoes/img/screen1_underline.png' %}"/>
+                            Индивидуальный пошив каждой пары
+                        </span>
+                            <br>
+                            С применением технологии bespoke с возможностью выполнения любых желаний для каждой пары.
+                        </div>
+                    </div>
+                    <div class="first_screen__advantages">
+                        <div class="col-sm-1 first_screen__advantages_dot">
+                            <span class="aboutus__div__list__header_dot">●</span>
+                        </div>
+                        <div class="col-sm-11 first_screen__advantages_text">
+                            <span class="aboutus__div__list__header">
 
-                    <p class="about_us__div_first_p">
-            <span class="aboutus__div__list__header">
-                <span class="aboutus__div__list__header_dot">●</span>
-                Персональное снятие мерок с клиентов
-            </span>
-                        <br>
-                        Выезд специалиста в любую точку Москвы и МО в любое удобное для Вас время.
-                    </p>
+                            Изготовление в течение 14-16 дней
+                        </span>
+                            <br>
+                            Которые начинаются с первой секунды после приема заявки в любом удобном для Вас месте.
+                        </div>
+                    </div>
+                    <div class="first_screen__advantages">
+                        <div class="col-sm-1 first_screen__advantages_dot">
+                            <span class="aboutus__div__list__header_dot">●</span>
+                        </div>
+                        <div class="col-sm-11 first_screen__advantages_text">
+                            <span class="aboutus__div__list__header">
 
-                    <p>
-                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>Индивидуальный пошив каждой пары</span><br>
-                        С применением технологии bespoke с возможностью выполнения любых желаний для каждой пары.
-                    </p>
-
-                    <p>
-                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>3 мастера с 17-летним опытом работы</span><br>
-                        Собственное производство в Москве, выпустившее за карьеру более 10 000 пар обуви.
-
-                    </p>
-
-                    <p>
-                        <span class="aboutus__div__list__header"><span class="aboutus__div__list__header_dot">●</span>Изготовление в течение 14-16 дней</span><br>
-                        Которые начинаются с первой секунды после приема заявки в любом удобном для Вас месте.
-                    </p>
+                            Бесплатное гарантийное обслуживание
+                        </span>
+                            <br>
+                            Мы уверены в качестве своей продукции, поэтому
+                            предоставялем бесплатное гарантийное
+                            обслуживание на каждую нашу пару обуви.
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1 col-sm-12">
-                <form action="{% url 'shoes:process' %}" method="post" class = "js_formsubmit">
+                <form action="{% url 'shoes:process' %}" method="post" class="js_formsubmit">
                     {% csrf_token %}
                     <div class="row first_screen__form__first_row " align="center">
                             <span class="first_screen__form__first_row__span">
@@ -165,11 +196,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h4 class="modal-title">Оставьте заявку</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="{% url 'shoes:process' %}" method="post" class = "js_formsubmit">
+                    <form action="{% url 'shoes:process' %}" method="post" class="js_formsubmit">
                         {% csrf_token %}
                         <h4>
                             Мы свяжемся с Вами и ответим на все вопросы.
                         </h4>
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ваше имя</label>
                             {{ form.name | attr:"placeholder:Имя" | add_class:"form-control first_screen__form__second_row__input jsFormSubmitName" }}
@@ -252,22 +284,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                  alt=""/>
                         </div>
                         <div>
-                                <span class = "img__styles_span active 1">
+                                <span class="img__styles_span active 1">
                                     Наш стилист и Вы, как заказчик, обсуждаете
                                     фасон и дизайн будущей пары, вид и цвет материроалов.
                                     Все это делается вместе с Вами
                                 </span>
-                                <span class = "img__styles_span 2">
+                                <span class="img__styles_span 2">
                                     Стилист - консультант снимает мерки стопы.
                                     По индивидуальным параметрам создается персональная колодка.
                                     Снятие мерок занимает в среднем 15 минут.
                                 </span>
-                                <span class = "img__styles_span 3">
+                                <span class="img__styles_span 3">
                                         В ателье происходит непосредственно работа:
                                     выкраиваются отдельные детали, обувь собирают, окрашивают, прошивают, перфорируют.
                                     Всё это делается вручную.
                                 </span>
-                                <span class = "img__styles_span 4">
+                                <span class="img__styles_span 4">
                                         Идивидуальная пара обуви готова.
                                     Теперь мы привезём её в удобное для вас место в любое время.
                                 </span>
@@ -276,29 +308,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-            <div class="col-md-10 col-md-offset-1 second_screen__last_row">
-                <div class="col-sm-12 second_screen__CTA">
-                    <div class="col-sm-12 second_screen__CTA_header">
+        <div class="col-md-10 col-md-offset-1 second_screen__last_row">
+            <div class="col-sm-12 second_screen__CTA">
+                <div class="col-sm-12 second_screen__CTA_header">
                                    <span class="second_screen__CTA_header__span">
                                         Мы любим свою работу.
                                    </span>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="second_screen__CTA_text">
+                </div>
+                <div class="col-sm-8">
+                    <div class="second_screen__CTA_text">
                                    <span class="second_screen__CTA_text__span">
                                        Каждый день работая над своим искусством мы научились <br> выполнять
                                        свою работу так, что нас ценят. Оцените и Вы:
                                    </span>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <button type="button" class="genuino__big_button btn" data-toggle="modal"
-                                data-target="#myModal">
-                            Что отличает нас?
-                        </button>
                     </div>
                 </div>
+                <div class="col-sm-4">
+                    <button type="button" class="genuino__big_button btn" data-toggle="modal"
+                            data-target="#myModal">
+                        Что отличает нас?
+                    </button>
+                </div>
             </div>
+        </div>
     </div>
 </section>
 <section id="third_screen">
@@ -441,7 +473,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Пошив любой модели из нашей коллекции туфель
-                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal"
+                                     data-target="#myModal" class="fourth_screen__card_header__content_img">
 
                             </span>
                     </div>
@@ -471,7 +504,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Пошив любой модели из нашей коллекции ботинок.
-                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal"
+                                     data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
 
                     </div>
@@ -501,7 +535,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Пошив любой модели из нашей коллекции
-                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal"
+                                     data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
 
                     </div>
@@ -531,7 +566,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="fourth_screen__card_header__content">
                             <span class="fourth_screen__card_header__content_span">
                                 Модель на Ваш выбор, которой нет в нашей коллекции
-                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal" data-target="#myModal" class="fourth_screen__card_header__content_img">
+                                <img src="{% static 'shoes/img/screen3_question.png' %}" data-toggle="modal"
+                                     data-target="#myModal" class="fourth_screen__card_header__content_img">
                             </span>
                     </div>
                 </div>
@@ -639,8 +675,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </span>
             </div>
             <div class="col-sm-4 footer__last__column" align="center">
-                <button data-toggle="modal" data-target="#myModal" class="fourth_screen__card_content__CTA_button btn genuino__small_button">
-                            Оставить заявку
+                <button data-toggle="modal" data-target="#myModal"
+                        class="fourth_screen__card_content__CTA_button btn genuino__small_button">
+                    Оставить заявку
                 </button>
             </div>
         </div>
